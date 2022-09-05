@@ -24,7 +24,7 @@ index 56ca9e310..99b7a33f6 100644
 -  ocv_append_source_files_cxx_compiler_options(filter_srcs "-Wno-suggest-override")  # GCC
 +  ocv_append_source_files_cxx_compiler_options(filter_srcs "-Wno-suggest-override -Os")  # GCC
  elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-   ocv_append_source_files_cxx_compiler_options(filter_srcs "-Wno-inconsistent-missing-override")  # Clang
+   ocv_append:source_files_cxx_compiler_options(filter_srcs "-Wno-inconsistent-missing-override")  # Clang
  endif()
 -- 
 2.28.0

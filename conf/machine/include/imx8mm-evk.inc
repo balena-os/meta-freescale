@@ -16,7 +16,7 @@ MACHINE_FEATURES:append:use-nxp-bsp = " optee jailhouse bcm4359"
 KERNEL_DEVICETREE = " \
     freescale/${KERNEL_DEVICETREE_BASENAME}.dtb \
 "
-KERNEL_DEVICETREE_append_use-nxp-bsp = " \
+KERNEL_DEVICETREE:append:use-nxp-bsp = " \
 	freescale/${KERNEL_DEVICETREE_BASENAME}-pcie-ep.dtb \
 	freescale/${KERNEL_DEVICETREE_BASENAME}-rm67191.dtb \
 "
@@ -54,4 +54,4 @@ OPTEE_BIN_EXT = "8mm"
 TEE_LOAD_ADDR = "0xbe000000"
 
 # Add additional firmware
-MACHINE_FIRMWARE_append = " linux-firmware-ath10k"
+MACHINE_FIRMWARE:append = " linux-firmware-ath10k"

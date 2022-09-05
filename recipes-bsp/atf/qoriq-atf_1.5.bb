@@ -8,7 +8,7 @@ PV = "1.5+git${SRCPV}"
 inherit deploy
 
 DEPENDS += "u-boot-mkimage-native u-boot openssl openssl-native mbedtls rcw cst-native"
-DEPENDS_append_lx2160a = " ddr-phy"
+DEPENDS:append:lx2160a = " ddr-phy"
 do_compile[depends] += "u-boot:do_deploy rcw:do_deploy uefi:do_deploy"
 
 S = "${WORKDIR}/git"
@@ -242,5 +242,5 @@ do_deploy() {
     fi
 }
 addtask deploy after do_install
-FILES_${PN} += "/boot"
+FILES:${PN} += "/boot"
 BBCLASSEXTEND = "native nativesdk"

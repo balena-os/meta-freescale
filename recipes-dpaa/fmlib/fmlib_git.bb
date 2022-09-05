@@ -34,7 +34,7 @@ do_install () {
 
 do_compile[depends] += "virtual/kernel:do_shared_workdir"
 
-ALLOW_EMPTY_${PN} = "1"
+ALLOW_EMPTY:${PN} = "1"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 

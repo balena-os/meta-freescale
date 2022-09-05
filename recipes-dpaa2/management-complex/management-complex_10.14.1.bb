@@ -32,7 +32,7 @@ do_deploy () {
 addtask deploy before do_build after do_install
 
 PACKAGES += "${PN}-image"
-FILES_${PN}-image += "/boot"
+FILES:${PN}-image += "/boot"
 
 INHIBIT_PACKAGE_STRIP = "1"
 

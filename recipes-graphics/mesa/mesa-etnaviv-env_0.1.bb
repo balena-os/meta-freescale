@@ -28,4 +28,4 @@ do_install_use-mainline-bsp() {
     fi
 }
 
-ALLOW_EMPTY_${PN} = "1"
+ALLOW_EMPTY:${PN} = "1"

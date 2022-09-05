@@ -47,5 +47,5 @@ do_deploy () {
 addtask deploy after do_install
 
 PACKAGES += "${PN}-image"
-FILES_${PN}-image += "/boot"
+FILES:${PN}-image += "/boot"
 COMPATIBLE_MACHINE = "(qoriq-arm64)"

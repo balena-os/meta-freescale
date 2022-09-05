@@ -18,7 +18,7 @@ SRCREV = "69554a26c932481acb7c5691038c367eca60e5bc"
 S = "${WORKDIR}/git"
 
 DEPENDS += "iso-codes util-linux zlib"
-DEPENDS_append_imxgpu2d = " virtual/libg2d"
+DEPENDS:append:imxgpu2d = " virtual/libg2d"
 
 inherit gobject-introspection use-imx-headers
 
@@ -83,9 +83,9 @@ EXTRA_OEMESON += " \
     -Dc_args="${CFLAGS} -I${STAGING_INCDIR_IMX}" \
 "
 
-FILES_${PN} += "${libdir}/gstreamer-1.0/include"
-FILES_${PN}-dev += "${libdir}/gstreamer-1.0/include/gst/gl/gstglconfig.h"
-FILES_${MLPREFIX}libgsttag-1.0 += "${datadir}/gst-plugins-base/1.0/license-translations.dict"
+FILES:${PN} += "${libdir}/gstreamer-1.0/include"
+FILES:${PN}-dev += "${libdir}/gstreamer-1.0/include/gst/gl/gstglconfig.h"
+FILES:${MLPREFIX}libgsttag-1.0 += "${datadir}/gst-plugins-base/1.0/license-translations.dict"
 
 def get_opengl_cmdline_list(switch_name, options, d):
     selected_options = []

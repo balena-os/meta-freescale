@@ -24,8 +24,8 @@ do_install () {
     cp -rf ${S}/misc/setup/traffic_files/ ${D}/usr/aiop/
 }
 
-FILES_${PN} += "/usr/aiop/*"
-INSANE_SKIP_${PN} += "arch"
+FILES:${PN} += "/usr/aiop/*"
+INSANE_SKIP:${PN} += "arch"
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 COMPATIBLE_MACHINE = "(ls2088a|ls1088a)"

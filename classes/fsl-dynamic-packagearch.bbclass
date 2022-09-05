@@ -16,7 +16,7 @@
 #
 # To use the class, specify, for example:
 #
-# MACHINE_SOCARCH_SUFFIX_soc = "-soc"
+# MACHINE_SOCARCH_SUFFIX:soc = "-soc"
 #
 # and the need filters, as:
 #
